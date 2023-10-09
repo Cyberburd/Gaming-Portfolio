@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/spike(1).png" type="Texture" id=1]
+[ext_resource path="res://scenes/Hitbox.tscn" type="PackedScene" id=2]
+
+[node name="spike" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 2.36649, -4.43112, 24.8639, 36.8671 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+scale = Vector2( 0.5, 0.5 )
+polygon = PoolVector2Array( 0.561768, -11.1182, 9.88252, 14.1305, -8.05109, 14.1305 )

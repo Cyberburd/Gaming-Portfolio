@@ -1,0 +1,517 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/ground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Block.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Square_Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/spike.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/World.gd" type="Script" id=6]
+[ext_resource path="res://scenes/Triangle_Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/ground2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/TileMap2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/ground3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/boss.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/flying_enemy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/friend.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/Block2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Block3.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/TileMap3.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/bossFight.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/friendRescue.tscn" type="PackedScene" id=18]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TileMap" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2110, -49 )
+scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( 1439682, 0, 0, 1439710, 0, 0, 1439738, 0, 0, 1439767, 0, 0, 1439796, 0, 0, 1439825, 0, 0, 1439854, 0, 0, 1439882, 0, 0, 1439911, 0, 0, 1439940, 0, 0, 1439969, 0, 0, 1506824, 1, 0, 1506826, 1, 0, 1506827, 1, 0, 1572363, 1, 0 )
+
+[node name="TileMap2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2426, -51 )
+scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( 1439682, 0, 0, 1439710, 0, 0, 1439738, 0, 0, 1439767, 0, 0, 1439796, 0, 0, 1439825, 0, 0, 1439854, 0, 0, 1439882, 0, 0, 1439911, 0, 0, 1439940, 0, 0, 1439969, 0, 0 )
+
+[node name="TileMap3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2742, -51 )
+scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( 1439682, 0, 0, 1439710, 0, 0, 1439738, 0, 0, 1439767, 0, 0, 1439796, 0, 0, 1439825, 0, 0, 1439854, 0, 0, 1439882, 0, 0, 1439911, 0, 0, 1439940, 0, 0, 1439969, 0, 0 )
+
+[node name="TileMap4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3058, -51 )
+scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( 1439682, 0, 0, 1439710, 0, 0, 1439738, 0, 0, 1439767, 0, 0, 1439796, 0, 0, 1439825, 0, 0, 1439854, 0, 0, 1439882, 0, 0, 1439911, 0, 0, 1439940, 0, 0, 1439969, 0, 0 )
+
+[node name="TileMap6" parent="." instance=ExtResource( 16 )]
+position = Vector2( 3236.32, -46.1423 )
+scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( 1114171, 0, 0, 1114200, 0, 0, 1114229, 0, 0, 1114258, 0, 0, 1114287, 0, 0, 1114316, 0, 0, 1114345, 0, 0, 1114374, 0, 0, 1114402, 0, 0, 1114431, 0, 0, 1114460, 0, 0, 1114489, 0, 0, 1114518, 0, 0, 1114547, 0, 0, 1114576, 0, 0, 1114605, 0, 0, 1114634, 0, 0, 1114663, 0, 0, 1114692, 0, 0, 2949700, 0, 0, 4850244, 0, 0, 6685252, 0, 0, 8520260, 0, 0, 10420804, 0, 0, 10814020, 0, 0, 10879556, 0, 0 )
+
+[node name="TileMap5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3374, -51 )
+scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( 1439682, 0, 0, 1439710, 0, 0, 1439738, 0, 0, 1439767, 0, 0, 1439796, 0, 0, 1439825, 0, 0, 1439854, 0, 0, 1439882, 0, 0, 1439911, 0, 0, 1439940, 0, 0, 1439969, 0, 0, 1439996, 0, 0, 1440025, 0, 0, 1505590, 1, 0, 1505618, 1, 0, 1505646, 1, 0, 1505674, 1, 0, 1505701, 1, 0, 1505729, 1, 0, 1505757, 1, 0, 1505784, 1, 0, 1505812, 1, 0, 1505840, 1, 0, 1505867, 1, 0, 1505896, 1, 0, 1505924, 1, 0, 1505951, 1, 0, 1505979, 1, 0, 1506007, 1, 0, 1506035, 1, 0, 1506062, 1, 0, 1506090, 1, 0, 1506118, 1, 0, 1506145, 1, 0, 1506173, 1, 0, 1506201, 1, 0, 1506228, 1, 0, 1506256, 1, 0, 1506284, 1, 0, 1506311, 1, 0, 1506339, 1, 0, 1506367, 1, 0, 1506395, 1, 0, 1506422, 1, 0, 1506450, 1, 0, 1506478, 1, 0, 1506505, 1, 0, 1506533, 1, 0, 1506561, 1, 0, 1506588, 1, 0, 1506616, 1, 0, 1506644, 1, 0, 1506671, 1, 0, 1506699, 1, 0, 1506727, 1, 0, 1506755, 1, 0, 1506782, 1, 0, 1506810, 1, 0, 1506838, 1, 0, 1506865, 1, 0, 1506893, 1, 0, 1506921, 1, 0, 1506948, 1, 0, 1506976, 1, 0, 1507004, 1, 0, 1507031, 1, 0, 1507059, 1, 0, 1507087, 1, 0, 1507115, 1, 0, 1507142, 1, 0 )
+
+[node name="friend2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 3275.84, -0.326233 )
+
+[node name="friend" parent="." instance=ExtResource( 13 )]
+position = Vector2( 129.47, -30.0295 )
+
+[node name="spike4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3368.89, 141.579 )
+
+[node name="spike6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3354.29, 141.639 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 50.5965, 15.4582 )
+
+[node name="Block" parent="." instance=ExtResource( 2 )]
+position = Vector2( 637.135, 103.61 )
+
+[node name="Block8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 718.199, 101.135 )
+
+[node name="Block9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 789.199, 128.135 )
+
+[node name="Block10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 932.199, 98.1352 )
+
+[node name="Block19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1036.2, 98.1352 )
+
+[node name="Block20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1135.2, 98.1352 )
+
+[node name="Block21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1346.54, 129.296 )
+
+[node name="Block22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1575.54, 129.296 )
+
+[node name="Block24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1555.54, 129.296 )
+
+[node name="Block23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1575.54, 110.296 )
+
+[node name="Block2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 397.135, 129.11 )
+
+[node name="Block11" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, 127.865 )
+
+[node name="Block12" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, 109.865 )
+
+[node name="Block13" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, 90.8652 )
+
+[node name="Block14" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, 71.8652 )
+
+[node name="Block15" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, 52.8652 )
+
+[node name="Block16" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, 34.8652 )
+
+[node name="Block17" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, 14.8652 )
+
+[node name="Block18" parent="." instance=ExtResource( 2 )]
+position = Vector2( -0.735474, -3.13483 )
+
+[node name="Block3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 465.135, 129.11 )
+
+[node name="Block4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 484.135, 129.11 )
+
+[node name="Block6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 560.135, 129.11 )
+
+[node name="Block7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 560.135, 110.11 )
+
+[node name="Block5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 484.135, 110.11 )
+
+[node name="ground" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 149 )
+
+[node name="ground11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 149 )
+
+[node name="ground2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 320, 149 )
+
+[node name="ground3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 640, 149 )
+
+[node name="ground4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 960, 149 )
+
+[node name="ground5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1280, 149 )
+
+[node name="spike" parent="." instance=ExtResource( 5 )]
+position = Vector2( 514, 141 )
+
+[node name="spike5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1661.78, 141.206 )
+
+[node name="spike7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2114.96, 140.851 )
+
+[node name="spike8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2125.96, 140.851 )
+
+[node name="spike9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2246.96, 140.851 )
+
+[node name="spike10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2294.96, 140.851 )
+
+[node name="spike13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2572.98, 83.2085 )
+
+[node name="spike16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2858.51, 141.257 )
+
+[node name="Block_3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3216.04, 17.6588 )
+
+[node name="Block_69" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3216.04, 37.6588 )
+
+[node name="Block_72" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3216.04, 57.6588 )
+
+[node name="Block_73" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3216.04, 77.6588 )
+
+[node name="Block_74" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3254.04, 77.6588 )
+
+[node name="Block_75" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3254.04, 56.6588 )
+
+[node name="Block_76" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3274.04, -0.341217 )
+
+[node name="Block_77" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3274.04, 77.6588 )
+
+[node name="Block_79" parent="." instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 3326.53, 105.169 )
+
+[node name="Block_80" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3235.04, 77.6588 )
+
+[node name="Block_81" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3235.04, 57.6588 )
+
+[node name="Block_82" parent="." instance=ExtResource( 15 )]
+position = Vector2( 3235.04, 37.6588 )
+
+[node name="spike18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3062.01, 43.2568 )
+
+[node name="spike15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2695.98, 121.209 )
+
+[node name="spike14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2475.98, 122.209 )
+
+[node name="spike11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2569.15, 123.211 )
+rotation = 1.5708
+
+[node name="spike17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2631.28, 81.7927 )
+rotation = 1.5708
+
+[node name="spike12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2599.15, 123.211 )
+rotation = 4.71239
+
+[node name="spike3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 523, 141 )
+
+[node name="spike2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 442.5, 141.5 )
+
+[node name="ground12" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3198, 149 )
+
+[node name="ground13" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3521, 149 )
+
+[node name="ground6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1600, 149 )
+
+[node name="ground7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1919, 149 )
+
+[node name="ground8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2237, 149 )
+
+[node name="ground9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2555, 149 )
+
+[node name="ground10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2874, 149 )
+
+[node name="enemy1" parent="." instance=ExtResource( 7 )]
+position = Vector2( 718.3, 149.367 )
+
+[node name="enemy6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1913.75, 148.615 )
+
+[node name="enemy8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2408.31, 147.615 )
+
+[node name="enemy2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 834.903, 148.176 )
+
+[node name="enemy4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1189.9, 148.176 )
+
+[node name="enemy5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1368.49, 148.369 )
+
+[node name="enemy7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1945.11, 148.593 )
+
+[node name="enemy9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2420.88, 148.106 )
+
+[node name="enemy10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2483.88, 148.106 )
+
+[node name="boss2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 1.62651, -28.9094 )
+
+[node name="enemy3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2055.77, 26.5163 )
+
+[node name="enemy11" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2458.69, 25.3413 )
+
+[node name="enemy12" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2662.76, 23.2801 )
+
+[node name="enemy14" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2932.06, 149.002 )
+
+[node name="enemy13" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2890.34, 93.4733 )
+rotation = 4.71239
+
+[node name="Block_2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3176.33, -2.936 )
+
+[node name="Block_4" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3196.33, -1.936 )
+
+[node name="Block_5" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3196.33, 18.064 )
+
+[node name="Block_31" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3196.33, 37.064 )
+
+[node name="Block_70" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3196.33, 57.064 )
+
+[node name="Block_71" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3196.33, 77.064 )
+
+[node name="Block_6" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3176.33, 17.064 )
+
+[node name="Block_7" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3176.33, 37.064 )
+
+[node name="Block_8" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3176.33, 57.064 )
+
+[node name="Block_9" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3176.33, 77.064 )
+
+[node name="Block_10" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1732.95, 128.978 )
+
+[node name="Block_11" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1850.95, 99.9777 )
+
+[node name="Block_12" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1964.95, 99.9777 )
+
+[node name="Block_13" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2160.95, 127.978 )
+
+[node name="Block_14" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2161.95, 108.978 )
+
+[node name="Block_15" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2180.95, 127.978 )
+
+[node name="Block_17" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2326.95, 127.978 )
+
+[node name="Block_18" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2347.95, 108.978 )
+
+[node name="Block_19" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2347.95, 127.978 )
+
+[node name="Block_20" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2368.95, 127.978 )
+
+[node name="Block_21" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2368.95, 107.978 )
+
+[node name="Block_22" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2368.95, 89.9777 )
+
+[node name="Block_23" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2388.95, 127.978 )
+
+[node name="Block_24" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2388.95, 108.978 )
+
+[node name="Block_25" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2388.95, 89.9777 )
+
+[node name="Block_26" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2408.95, 89.9777 )
+
+[node name="Block_28" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2428.95, 89.9777 )
+
+[node name="Block_29" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2428.95, 109.978 )
+
+[node name="Block_32" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2408.95, 109.978 )
+
+[node name="Block_30" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2428.95, 128.978 )
+
+[node name="Block_33" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2448.95, 128.978 )
+
+[node name="Block_34" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2467.95, 128.978 )
+
+[node name="Block_36" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2666.28, 128.562 )
+
+[node name="Block_37" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2665.28, 109.562 )
+
+[node name="Block_38" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2645.28, 109.562 )
+
+[node name="Block_39" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2625.28, 109.562 )
+
+[node name="Block_40" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2605.28, 109.562 )
+
+[node name="Block_41" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2604.28, 90.5619 )
+
+[node name="Block_42" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2604.28, 71.5619 )
+
+[node name="Block_43" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2584.28, 71.5619 )
+
+[node name="Block_44" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2584.28, 90.5619 )
+
+[node name="Block_45" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2563.28, 90.5619 )
+
+[node name="Block_46" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2543.28, 90.5619 )
+
+[node name="Block_47" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2543.28, 110.562 )
+
+[node name="Block_48" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2523.28, 110.562 )
+
+[node name="Block_50" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2484.28, 110.562 )
+
+[node name="Block_51" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2484.28, 129.562 )
+
+[node name="Block_52" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2484.28, 129.562 )
+
+[node name="Block_35" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2685.99, 128.506 )
+
+[node name="Block_49" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2910.49, 129.506 )
+
+[node name="Block_56" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2890.49, 129.506 )
+
+[node name="Block_57" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2890.49, 110.506 )
+
+[node name="Block_58" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2870.49, 128.506 )
+
+[node name="Block_53" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2910.49, 109.506 )
+
+[node name="Block_54" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2910.49, 89.5058 )
+
+[node name="Block_55" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2910.49, 70.5058 )
+
+[node name="Block_59" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2993.49, 45.5058 )
+
+[node name="Block_60" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3013.49, 45.5058 )
+
+[node name="Block_61" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3033.49, 45.5058 )
+
+[node name="Block_62" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3053.49, 45.5058 )
+
+[node name="Block_63" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3073.49, 45.5058 )
+
+[node name="Block_64" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3093.49, 45.5058 )
+
+[node name="Block_65" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3113.49, 45.5058 )
+
+[node name="Block_66" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3113.49, 65.5058 )
+
+[node name="Block_67" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3113.49, 84.5058 )
+
+[node name="Block_27" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2408.95, 69.9777 )
+
+[node name="Block_16" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2140.95, 127.978 )
+
+[node name="boss" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3738.89, 149.554 )

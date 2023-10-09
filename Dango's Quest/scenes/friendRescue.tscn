@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/Hitbox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/sister_happy.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8.96681, 7.2157 )
+
+[node name="friendRescue" type="KinematicBody2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8, -8 )
+scale = Vector2( 0.082, 0.082 )
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7.625, -7.63312 )
+shape = SubResource( 2 )
+
+[node name="check" type="RayCast2D" parent="."]
+position = Vector2( 30, -2 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 2 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+position = Vector2( 7.23651, -10.449 )
+polygon = PoolVector2Array( 2.98415, -4.39977, 8.88337, -0.388306, 8.88337, 5.15696, 3.22012, 10.2303, -3.50499, 10.1123, -8.34234, 5.51091, -8.46032, -0.624271, -2.56111, -4.87171 )

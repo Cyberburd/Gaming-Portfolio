@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Sprites/boss_idle.png" type="Texture" id=1]
+[ext_resource path="res://scenes/bossFight.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Hitbox.tscn" type="PackedScene" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29.3681, 24 )
+
+[node name="bossFight" type="KinematicBody2D"]
+collision_layer = 0
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 28.9, -24.1 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 29.6319, -24 )
+shape = SubResource( 2 )
+
+[node name="check" type="RayCast2D" parent="."]
+position = Vector2( 30, -2 )
+enabled = true
+cast_to = Vector2( 0, 2 )
+
+[node name="Hitbox" parent="." instance=ExtResource( 3 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+position = Vector2( 12, -20 )
+scale = Vector2( 1.5, 1.72159 )
+polygon = PoolVector2Array( 30.6667, -16.498, -9.33333, -16.264, -8, 11.3832, 2, 11.3832, 28.6667, 11.3832 )
